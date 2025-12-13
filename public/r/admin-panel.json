@@ -7,15 +7,15 @@
     "lucide-react"
   ],
   "registryDependencies": [
-    "glass-card",
-    "glass-button",
-    "glass-input",
-    "glass-tabs",
-    "glass-dialog",
-    "glass-badge",
-    "glass-avatar",
-    "glass-progress",
-    "glass-switch"
+    "https://ui.eindev.ir/r/glass-card.json",
+    "https://ui.eindev.ir/r/glass-button.json",
+    "https://ui.eindev.ir/r/glass-input.json",
+    "https://ui.eindev.ir/r/glass-tabs.json",
+    "https://ui.eindev.ir/r/glass-dialog.json",
+    "https://ui.eindev.ir/r/glass-badge.json",
+    "https://ui.eindev.ir/r/glass-avatar.json",
+    "https://ui.eindev.ir/r/glass-progress.json",
+    "https://ui.eindev.ir/r/glass-switch.json"
   ],
   "files": [
     {
