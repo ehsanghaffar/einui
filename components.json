@@ -18,5 +18,7 @@
     "lib": "@/lib",
     "hooks": "@/hooks"
   },
-  "registries": {}
+  "registries": {
+    "@ein": "https://ui.eindev.ir/r/{name}.json"
+  }
 }
