@@ -1,26 +1,13 @@
+import { Button } from "@/components/ui/button";
 
-import { cn } from "@/lib/utils"
-import { Button } from "./ui/button"
-
-export function OpenInV0Button({
-  name,
-  className,
-}: { name: string } & React.ComponentProps<typeof Button>) {
+export function OpenInV0Button({ url }: { url: string }) {
   return (
     <Button
       aria-label="Open in v0"
-      size="sm"
-      className={cn(
-        "shadow-none bg-black text-white hover:bg-black hover:text-white dark:bg-white dark:text-black",
-        className
-      )}
+      className="h-8 gap-1 rounded-[6px] bg-black px-3 text-xs text-white hover:bg-black hover:text-white dark:bg-white dark:text-black"
       asChild
     >
-      <a
-        href={`https://v0.dev/chat/api/open?url=${process.env.NEXT_PUBLIC_BASE_URL}/r/${name}.json`}
-        target="_blank"
-        rel="noreferrer"
-      >
+      <a href={`https://v0.dev/chat/api/open?url=${url}`} target="_blank" rel="noreferrer">
         Open in{" "}
         <svg
           viewBox="0 0 40 20"
@@ -39,5 +26,5 @@ export function OpenInV0Button({
         </svg>
       </a>
     </Button>
-  )
+  );
 }
