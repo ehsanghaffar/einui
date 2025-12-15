@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     icon: [
       { url: "/logo.svg", type: "image/svg+xml" },
     ],
-    apple: "/logo-white.png",
+    apple: "/logo.png",
   },
   manifest: "/manifest.json",
   alternates: {
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     description: "Beautiful, accessible React components with frosted glass morphism.",
     creator: "@ehsanghaffar",
     site: "@einui",
-    images: ["/logo-white.png"],
+    images: ["/logo.png"],
   },
   robots: {
     index: true,
