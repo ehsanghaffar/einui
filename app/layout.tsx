@@ -156,7 +156,7 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased">
         <TopHeader />
-        <div className="">{children}</div>
+        <div>{children}</div>
         <Analytics />
       </body>
     </html>
