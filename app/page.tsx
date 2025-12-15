@@ -496,18 +496,17 @@ export default function HomePage() {
         </section>
 
         {/* Footer */}
-        <footer className="text-center pt-8 border-t border-white/10">
-          <div className="relative h-12 w-12 rounded-xl bg-linear-to-br from-cyan-400 via-blue-500 to-purple-500 p-0.5">
-            <div className="flex h-full w-full items-center justify-center rounded-[10px] bg-slate-900/90 backdrop-blur-sm">
-              <Blocks className="h-6 w-6 text-white" />
-            </div>
-          </div>
+        <footer className="text-center pt-8 border-t border-white/10 justify-items-center">
           <div className="flex justify-center gap-4 mb-6">
-            <GlassButton variant="ghost" size="sm">
-              <Github className="size-4" />
+            <GlassButton variant="ghost" size="sm" asChild>
+              <a href="https://github.com/ehsanghaffar" target="_blank">
+                <Github className="size-4" />
+              </a>
             </GlassButton>
-            <GlassButton variant="ghost" size="sm">
-              <Twitter className="size-4" />
+            <GlassButton variant="ghost" size="sm" asChild>
+              <a href="https://twitter.com/ehsanghaffar" target="_blank">
+                <Twitter className="size-4" />
+              </a>
             </GlassButton>
           </div>
           <p className="text-white/40 text-sm">

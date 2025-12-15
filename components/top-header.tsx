@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Github, Star } from "lucide-react"
-import Image from "next/image"
+import Link from "next/link";
+import { Github, Star } from "lucide-react";
+import Image from "next/image";
 
 export function TopHeader() {
   return (
@@ -10,10 +10,10 @@ export function TopHeader() {
       <div className="container mx-auto h-full px-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <Image
-            src="/logo.svg"
-            width="40"
-            height="40" alt={"Ein ui"} />
+          <Image src="/logo-white-svg.svg" width="30" height="30" alt="Einui Liquid Glass Components" />
+          <span className="bg-linear-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent text-base font-bold">
+            EinUI
+          </span>
         </Link>
 
         {/* Right side - GitHub badge */}
@@ -43,5 +43,5 @@ export function TopHeader() {
         </div>
       </div>
     </header>
-  )
+  );
 }
