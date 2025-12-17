@@ -1,0 +1,60 @@
+# Dependencies
+node_modules
+npm-debug.log
+pnpm-debug.log
+
+# Build outputs
+.next
+dist
+build
+out
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+coverage
+.nyc_output
+
+# Documentation
+docs
+
+# CI/CD
+.github
+.gitlab-ci.yml
+.travis.yml
+
+# Miscellaneous
+README.md
+LICENCE
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md
+SECURITY.md
+*.md
+
+# Optional npm cache directory
+.npm
+
+# Yarn integrity file
+yarn-integrity
+
+# Lock files for production (if needed)
+# pnpm-lock.yaml - keeping this for reproducible builds
+
+# Development files
+.eslintcache
+tsconfig.tsbuildinfo
