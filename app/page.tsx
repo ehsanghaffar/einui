@@ -54,6 +54,7 @@ import {
   GlassAvatar,
   GlassAvatarFallback,
 } from "@/registry/liquid-glass";
+import { GlassAnnouncement } from "@/components/glass-announcement";
 
 const components = [
   {
@@ -223,6 +224,17 @@ export default function HomePage() {
       <div className="relative z-10 container mx-auto px-4 py-8 md:py-16">
         {/* Hero Section */}
         <header className="text-center mb-16 md:mb-24">
+          {/* Announcement Banner for New Widgets */}
+          <div className="flex justify-center mb-6">
+            <GlassAnnouncement
+              href="/docs/components/command-palette"
+              label="New"
+              variant="purple"
+              size="md"
+            >
+              Introducing Innovative - Explore our new components like Command Palette,
+            </GlassAnnouncement>
+          </div>
           <div className="flex items-center justify-center gap-3 mb-6">
             <div className="relative h-12 w-12 rounded-xl bg-linear-to-br from-cyan-400 via-blue-500 to-purple-500 p-0.5">
               <div className="flex h-full w-full items-center justify-center rounded-[10px] bg-slate-900/90 backdrop-blur-sm">
