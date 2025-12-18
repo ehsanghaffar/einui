@@ -60,67 +60,67 @@ const components = [
   {
     title: "Cards",
     description: "Flexible container with glass morphism",
-    href: "/docs/components/cards",
+    href: "/docs/components/glass-card",
     icon: Square,
   },
   {
     title: "Buttons",
     description: "Interactive buttons with glow effects",
-    href: "/docs/components/buttons",
+    href: "/docs/components/glass-button",
     icon: LayoutGrid,
   },
   {
     title: "Dialogs",
     description: "Modal dialogs with backdrop blur",
-    href: "/docs/components/dialogs",
+    href: "/docs/components/glass-dialog",
     icon: MessageSquare,
   },
   {
     title: "Inputs",
     description: "Form inputs with focus animations",
-    href: "/docs/components/inputs",
+    href: "/docs/components/glass-input",
     icon: TextCursorInput,
   },
   {
     title: "Tabs",
     description: "Tabbed interfaces with transitions",
-    href: "/docs/components/tabs",
+    href: "/docs/components/glass-tabs",
     icon: Layers,
   },
   {
     title: "Badge",
     description: "Status indicators with colors",
-    href: "/docs/components/badge",
+    href: "/docs/components/glass-badge",
     icon: Info,
   },
   {
     title: "Avatar",
     description: "User profiles with glow effects",
-    href: "/docs/components/avatar",
+    href: "/docs/components/glass-avatar",
     icon: User,
   },
   {
     title: "Progress",
     description: "Animated linear progress bars",
-    href: "/docs/components/progress",
+    href: "/docs/components/glass-progress",
     icon: CheckCircle,
   },
   {
     title: "Switch",
     description: "Toggle switches with animations",
-    href: "/docs/components/switch",
+    href: "/docs/components/glass-switch",
     icon: ToggleLeft,
   },
   {
     title: "Slider",
     description: "Range sliders with linear tracks",
-    href: "/docs/components/slider",
+    href: "/docs/components/glass-slider",
     icon: Sliders,
   },
   {
     title: "Tooltip",
     description: "Contextual glass tooltips",
-    href: "/docs/components/tooltip",
+    href: "/docs/components/glass-tooltip",
     icon: CircleDot,
   },
 ];
@@ -129,56 +129,56 @@ const innovativeComponents = [
   {
     title: "Command Palette",
     description: "Spotlight search with Cmd+K",
-    href: "/docs/components/command-palette",
+    href: "/docs/components/glass-command-palette",
     icon: Command,
     isNew: true,
   },
   {
     title: "Notifications",
     description: "Toast system with progress",
-    href: "/docs/components/notifications",
+    href: "/docs/components/glass-notification",
     icon: Bell,
     isNew: true,
   },
   {
     title: "Morph Card",
     description: "3D perspective tilt effects",
-    href: "/docs/components/morph-card",
+    href: "/docs/components/glass-morph-card",
     icon: MousePointer,
     isNew: true,
   },
   {
     title: "Ripple",
     description: "Material-style touch feedback",
-    href: "/docs/components/ripple",
+    href: "/docs/components/glass-ripple",
     icon: Droplets,
     isNew: true,
   },
   {
     title: "Timeline",
     description: "Chronological event display",
-    href: "/docs/components/timeline",
+    href: "/docs/components/glass-timeline",
     icon: Clock,
     isNew: true,
   },
   {
     title: "Gauge",
     description: "Circular progress meters",
-    href: "/docs/components/gauge",
+    href: "/docs/components/glass-gauge",
     icon: Gauge,
     isNew: true,
   },
   {
     title: "Dock",
     description: "macOS-style magnifying dock",
-    href: "/docs/components/dock",
+    href: "/docs/components/glass-dock",
     icon: Dock,
     isNew: true,
   },
   {
     title: "Spotlight",
     description: "Onboarding tour highlights",
-    href: "/docs/components/spotlight",
+    href: "/docs/components/glass-spotlight",
     icon: Sparkles,
     isNew: true,
   },
@@ -268,7 +268,7 @@ export default function HomePage() {
                 Documentation
               </GlassButton>
             </Link>
-            <Link href="/docs/components/cards">
+            <Link href="/docs/components/glass-avatar">
               <GlassButton variant="outline" size="lg">
                 Browse Components
                 <ArrowRight className="size-4 ml-2" />
@@ -293,8 +293,8 @@ export default function HomePage() {
                 <MousePointer className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
                 <h3 className="text-white font-semibold mb-2">3D Morph Card</h3>
                 <p className="text-white/60 text-sm">Hover to see the tilt effect</p>
-                <GlassButton variant="primary" size="sm" className="mt-4">
-                  View Component
+                <GlassButton variant="primary" size="sm" className="mt-4" asChild>
+                  <Link href="/docs/components/glass-morph-card">View Component</Link>
                 </GlassButton>
               </div>
             </GlassMorphCard>
@@ -312,7 +312,7 @@ export default function HomePage() {
                 Press{" "}
                 <kbd className="px-2 py-1 rounded bg-white/10 text-white/80 text-xs">Cmd+K</kbd>
               </p>
-              <Link href="/docs/components/command-palette">
+              <Link href="/docs/components/glass-command-palette">
                 <GlassBadge variant="primary" size="sm">
                   Try it
                 </GlassBadge>
@@ -465,7 +465,7 @@ export default function HomePage() {
               </div>
               <GlassButton variant="primary" className="text-center w-full" asChild>
                 <a
-                  href=""
+                  href="https://github.com/ehsanghaffar/einui"
                   className="flex text-center items-center"
                   target="_blank"
                   rel="noopener noreferrer"
