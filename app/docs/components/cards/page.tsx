@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { PageHeader } from "@/components/docs/page-header"
-import { ComponentPreview } from "@/components/docs/component-preview"
-import { CLIInstall } from "@/components/docs/cli-install"
+import { PageHeader } from "@/components/docs/page-header";
+import { ComponentPreview } from "@/components/docs/component-preview";
+import { CLIInstall } from "@/components/docs/cli-install";
 import {
   GlassCard,
   GlassCardHeader,
@@ -10,13 +10,13 @@ import {
   GlassCardDescription,
   GlassCardContent,
   GlassCardFooter,
-} from "@/registry/liquid-glass/glass-card"
-import { GlassButton } from "@/registry/liquid-glass/glass-button"
-import { GlassInput } from "@/registry/liquid-glass/glass-input"
-import { GlassAvatar, GlassAvatarFallback } from "@/registry/liquid-glass/glass-avatar"
-import { GlassBadge } from "@/registry/liquid-glass/glass-badge"
-import { Label } from "@/components/ui/label"
-import { Mail, Lock } from "lucide-react"
+} from "@/registry/liquid-glass/glass-card";
+import { GlassButton } from "@/registry/liquid-glass/glass-button";
+import { GlassInput } from "@/registry/liquid-glass/glass-input";
+import { GlassAvatar, GlassAvatarFallback } from "@/registry/liquid-glass/glass-avatar";
+import { GlassBadge } from "@/registry/liquid-glass/glass-badge";
+import { Label } from "@/components/ui/label";
+import { Mail, Lock, Users, DollarSign, TrendingUp, Star } from "lucide-react";
 
 const basicCardCode = `<GlassCard>
   <GlassCardHeader>
@@ -31,7 +31,7 @@ const basicCardCode = `<GlassCard>
   <GlassCardFooter>
     <GlassButton>Action</GlassButton>
   </GlassCardFooter>
-</GlassCard>`
+</GlassCard>`;
 
 const loginCardCode = `<GlassCard className="w-full max-w-sm">
   <GlassCardHeader>
@@ -53,7 +53,20 @@ const loginCardCode = `<GlassCard className="w-full max-w-sm">
       Sign In
     </GlassButton>
   </GlassCardFooter>
-</GlassCard>`
+</GlassCard>`;
+
+const featureCardCode = `<GlassCard className="w-full max-w-sm">
+    <div className="rounded-t-2xl overflow-hidden">
+      <div className="h-32 bg-linear-to-r from-purple-500 to-pink-500" />
+    </div>
+  <GlassCardContent className="pt-4">
+    <h3 className="text-white font-semibold text-lg">Featured Product</h3>
+    <p className="text-white/60 text-sm mt-2">A short description of the featured product or service.</p>
+  </GlassCardContent>
+  <GlassCardFooter>
+    <GlassButton variant="primary">Explore</GlassButton>
+  </GlassCardFooter>
+</GlassCard>`;
 
 const profileCardCode = `<GlassCard className="w-full max-w-sm">
   <GlassCardContent className="pt-6">
@@ -69,7 +82,7 @@ const profileCardCode = `<GlassCard className="w-full max-w-sm">
       </div>
     </div>
   </GlassCardContent>
-</GlassCard>`
+</GlassCard>`;
 
 export default function CardsPage() {
   return (
@@ -77,6 +90,31 @@ export default function CardsPage() {
       <PageHeader
         title="Cards"
         description="Flexible container components with frosted glass morphism effect, perfect for displaying grouped content."
+      />
+
+      <ComponentPreview
+        title="Feature Card"
+        description="Highlight a featured item with visual media and a call-to-action."
+        preview={
+          <GlassCard className="w-full max-w-sm">
+            <div className="rounded-t-2xl overflow-hidden">
+              <div className="h-32 bg-linear-to-r from-purple-500 to-pink-500" />
+            </div>
+            <GlassCardContent className="pt-4">
+              <h3 className="text-white font-semibold text-lg flex items-center gap-2">
+                <Star className="w-4 h-4 text-yellow-300" /> Featured Product
+              </h3>
+              <p className="text-white/60 text-sm mt-2">
+                A short description of the featured product or service that is concise and to the
+                point.
+              </p>
+            </GlassCardContent>
+            <GlassCardFooter>
+              <GlassButton variant="primary">Explore</GlassButton>
+            </GlassCardFooter>
+          </GlassCard>
+        }
+        code={featureCardCode}
       />
 
       <CLIInstall componentName="glass-card" />
@@ -88,10 +126,14 @@ export default function CardsPage() {
           <GlassCard className="w-full max-w-sm">
             <GlassCardHeader>
               <GlassCardTitle>Card Title</GlassCardTitle>
-              <GlassCardDescription>Card description goes here with additional context.</GlassCardDescription>
+              <GlassCardDescription>
+                Card description goes here with additional context.
+              </GlassCardDescription>
             </GlassCardHeader>
             <GlassCardContent>
-              <p className="text-white/80">This is the card content area where you can add any content.</p>
+              <p className="text-white/80">
+                This is the card content area where you can add any content.
+              </p>
             </GlassCardContent>
             <GlassCardFooter>
               <GlassButton>Action</GlassButton>
@@ -167,5 +209,5 @@ export default function CardsPage() {
         code={profileCardCode}
       />
     </div>
-  )
+  );
 }
