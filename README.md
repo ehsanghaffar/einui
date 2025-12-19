@@ -70,6 +70,15 @@ pnpm dev
 # App runs on http://localhost:3000
 ```
 
+### Using Next.js 16.1.0 bundle analyzer
+
+To analyze your Next.js bundle, you can use the built-in experimental analyzer:
+
+```bash
+pnpm analyze
+# or npm run analyze
+```
+
 ## Contributing
 
 Contributions welcome! Please read [`CONTRIBUTING.md`](./CONTRIBUTING.md) and follow the issue and PR templates when submitting work.
