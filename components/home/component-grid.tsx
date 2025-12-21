@@ -45,7 +45,7 @@ const advancedComponents = [
     icon: Command,
     isNew: true,
   },
-  { title: "Notifications", href: "/docs/components/glass-notifications", icon: Bell, isNew: true },
+  { title: "Notifications", href: "/docs/components/glass-notification", icon: Bell, isNew: true },
   { title: "Morph Card", href: "/docs/components/glass-morph-card", icon: MousePointer, isNew: true },
   { title: "Ripple", href: "/docs/components/glass-ripple", icon: Droplets },
   { title: "Timeline", href: "/docs/components/glass-timeline", icon: Clock },
@@ -57,7 +57,7 @@ const widgetTypes = [
   { title: "Calendar", href: "/docs/components/calendar-widget", icon: Calendar },
   { title: "Clock", href: "/docs/components/clock-widget", icon: Clock },
   { title: "Weather", href: "/docs/components/weather-widget", icon: CloudSun },
-  { title: "Stocks", href: "/docs/components/stocks-widget", icon: TrendingUp },
+  { title: "Stocks", href: "/docs/components/stock-widget", icon: TrendingUp },
 ];
 
 export function ComponentGrid() {
