@@ -1,90 +1,15 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { useState } from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { cn } from "@/lib/utils"
-import {
-  Menu,
-  X,
-  BookOpen,
-  Download,
-  Palette,
-  Terminal,
-  Package,
-  Layers,
-  LayoutGrid,
-  Square,
-  MessageSquare,
-  TextCursorInput,
-  PanelLeft,
-  Home,
-  Moon,
-  FileJson,
-  Blocks,
-  CircleDot,
-  ToggleLeft,
-  Sliders,
-  User,
-  CheckCircle,
-  Info,
-} from "lucide-react"
+import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
+import { Menu, X, Home, Blocks } from "lucide-react";
+import { navigation } from "@/contants/nav-items";
 
-interface NavItem {
-  title: string
-  href: string
-  icon?: React.ReactNode
-}
-
-interface NavSection {
-  title: string
-  items: NavItem[]
-}
-
-const navigation: NavSection[] = [
-  {
-    title: "Get Started",
-    items: [
-      { title: "Introduction", href: "/docs", icon: <BookOpen className="h-4 w-4" /> },
-      { title: "Installation", href: "/docs/installation", icon: <Download className="h-4 w-4" /> },
-      { title: "Theming", href: "/docs/theming", icon: <Palette className="h-4 w-4" /> },
-      { title: "Dark Mode", href: "/docs/dark-mode", icon: <Moon className="h-4 w-4" /> },
-      { title: "CLI", href: "/docs/cli", icon: <Terminal className="h-4 w-4" /> },
-    ],
-  },
-  {
-    title: "Components",
-    items: [
-      { title: "Cards", href: "/docs/components/cards", icon: <Square className="h-4 w-4" /> },
-      { title: "Buttons", href: "/docs/components/buttons", icon: <LayoutGrid className="h-4 w-4" /> },
-      { title: "Dialogs", href: "/docs/components/dialogs", icon: <MessageSquare className="h-4 w-4" /> },
-      { title: "Inputs", href: "/docs/components/inputs", icon: <TextCursorInput className="h-4 w-4" /> },
-      { title: "Tabs", href: "/docs/components/tabs", icon: <Layers className="h-4 w-4" /> },
-      { title: "Badge", href: "/docs/components/badge", icon: <Info className="h-4 w-4" /> },
-      { title: "Avatar", href: "/docs/components/avatar", icon: <User className="h-4 w-4" /> },
-      { title: "Progress", href: "/docs/components/progress", icon: <CheckCircle className="h-4 w-4" /> },
-      { title: "Switch", href: "/docs/components/switch", icon: <ToggleLeft className="h-4 w-4" /> },
-      { title: "Slider", href: "/docs/components/slider", icon: <Sliders className="h-4 w-4" /> },
-      { title: "Tooltip", href: "/docs/components/tooltip", icon: <CircleDot className="h-4 w-4" /> },
-    ],
-  },
-  {
-    title: "Registry",
-    items: [
-      { title: "Overview", href: "/docs/registry", icon: <Package className="h-4 w-4" /> },
-      { title: "registry.json", href: "/docs/registry/schema", icon: <FileJson className="h-4 w-4" /> },
-    ],
-  },
-  {
-    title: "Blocks",
-    items: [{ title: "Admin Panel", href: "/docs/blocks/admin", icon: <PanelLeft className="h-4 w-4" /> }],
-  },
-]
-
-export function UnifiedMobileNav() {
-  const [isOpen, setIsOpen] = useState(false)
-  const pathname = usePathname()
+export function MobileNav() {
+  const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <div className="lg:hidden">
@@ -110,7 +35,10 @@ export function UnifiedMobileNav() {
 
       {/* Mobile menu overlay */}
       {isOpen && (
-        <div className="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm" onClick={() => setIsOpen(false)}>
+        <div
+          className="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm"
+          onClick={() => setIsOpen(false)}
+        >
           <nav
             className="absolute top-16 left-0 right-0 max-h-[calc(100vh-4rem)] overflow-y-auto bg-slate-900/95 backdrop-blur-xl border-b border-white/10"
             onClick={(e) => e.stopPropagation()}
@@ -122,7 +50,9 @@ export function UnifiedMobileNav() {
                 onClick={() => setIsOpen(false)}
                 className={cn(
                   "mb-4 flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition-all",
-                  pathname === "/" ? "bg-white/15 text-white" : "text-white/60 hover:bg-white/5 hover:text-white",
+                  pathname === "/"
+                    ? "bg-white/15 text-white"
+                    : "text-white/60 hover:bg-white/5 hover:text-white"
                 )}
               >
                 <Home className="h-4 w-4" />
@@ -144,7 +74,7 @@ export function UnifiedMobileNav() {
                             "flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition-all",
                             pathname === item.href
                               ? "bg-linear-to-r from-cyan-500/20 to-purple-500/20 text-white"
-                              : "text-white/60 hover:bg-white/5 hover:text-white",
+                              : "text-white/60 hover:bg-white/5 hover:text-white"
                           )}
                         >
                           {item.icon}
@@ -160,5 +90,5 @@ export function UnifiedMobileNav() {
         </div>
       )}
     </div>
-  )
+  );
 }
