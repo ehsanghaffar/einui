@@ -281,7 +281,6 @@
         }
       ]
     },
-
     {
       "name": "calendar-widget",
       "type": "registry:component",
@@ -350,6 +349,24 @@
       "files": [
         {
           "path": "registry/widgets/stats-widget.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "stock-widget",
+      "type": "registry:component",
+      "title": "Stock Widgets",
+      "description": "Stock market widgets for displaying stock prices, trends, and news with liquid glass styling.",
+      "registryDependencies": [
+        "https://ui.eindev.ir/r/base-widget.json"
+      ],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/widgets/stock-widget.tsx",
           "type": "registry:component"
         }
       ]
