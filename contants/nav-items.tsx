@@ -169,6 +169,12 @@ export const navigation: NavSection[] = [
         isNew: true,
       },
       {
+        title: "Stock",
+        href: "/docs/components/stock-widget",
+        icon: <Gauge className="size-4" />,
+        isNew: true,
+      },
+      {
         title: "Weather",
         href: "/docs/components/weather-widget",
         icon: <Cloud className="size-4" />,
