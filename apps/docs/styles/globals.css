@@ -37,6 +37,15 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Liquid Glass custom properties */
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: rgba(0, 0, 0, 0.37);
+  --glass-highlight: rgba(255, 255, 255, 0.2);
+  --glass-glow-cyan: rgba(6, 182, 212, 0.3);
+  --glass-glow-blue: rgba(59, 130, 246, 0.3);
+  --glass-glow-purple: rgba(168, 85, 247, 0.3);
 }
 
 .dark {
@@ -72,6 +81,10 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
+
+  /* Dark mode glass properties */
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.15);
 }
 
 @theme inline {
@@ -121,5 +134,49 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Liquid Glass utility classes */
+@layer components {
+  .glass-surface {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20;
+    box-shadow: 0 8px 32px var(--glass-shadow);
+  }
+
+  .glass-glow {
+    position: absolute;
+    inset: -4px;
+    border-radius: inherit;
+    opacity: 0.7;
+    filter: blur(16px);
+    background: linear-gradient(to right, var(--glass-glow-cyan), var(--glass-glow-blue), var(--glass-glow-purple));
+  }
+
+  .glass-highlight {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(to bottom, var(--glass-highlight), transparent);
+  }
+
+  .glass-inner-shadow {
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
   }
 }
