@@ -6,6 +6,10 @@
     ".": "./index.mjs",
     "./library": "./library.mjs"
   },
+  "scripts": {
+    "lint": "eslint .",
+    "clean": "rm -rf .turbo"
+  },
   "dependencies": {
     "eslint": "^9.39.2",
     "eslint-config-next": "16.2.9",

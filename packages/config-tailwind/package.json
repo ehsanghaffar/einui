@@ -1,5 +1,22 @@
 {
   "name": "@einui/tailwind-config",
   "version": "1.0.0",
-  "private": true
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts",
+    "./postcss": "./postcss.config.mjs"
+  },
+  "scripts": {
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "clean": "rm -rf dist .turbo"
+  },
+  "devDependencies": {
+    "@einui/eslint-config": "workspace:*",
+    "@einui/typescript-config": "workspace:*",
+    "eslint": "^9.39.2",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.38.0"
+  }
 }
