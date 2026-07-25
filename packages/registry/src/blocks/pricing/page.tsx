@@ -8,10 +8,10 @@ import {
   GlassCardDescription,
   GlassCardHeader,
   GlassCardTitle,
-} from "../../liquid-glass/glass-card";
-import { GlassButton } from "../../liquid-glass/glass-button";
-import { GlassBadge } from "../../liquid-glass/glass-badge";
-import { GlassSwitch } from "../../liquid-glass/glass-switch";
+  GlassButton,
+  GlassBadge,
+  GlassSwitch,
+} from "@einui/registry";
 
 const plans = [
   {

@@ -2,9 +2,15 @@
 
 import { useState } from "react"
 import { Mail, ArrowLeft, Send } from "lucide-react"
-import { GlassCard, GlassCardContent, GlassCardDescription, GlassCardHeader, GlassCardTitle } from "../../liquid-glass/glass-card"
-import { GlassInput } from "../../liquid-glass/glass-input"
-import { GlassButton } from "../../liquid-glass/glass-button"
+import {
+  GlassCard,
+  GlassCardContent,
+  GlassCardDescription,
+  GlassCardHeader,
+  GlassCardTitle,
+  GlassInput,
+  GlassButton,
+} from "@einui/registry"
 import { Label } from "@einui/ui"
 
 export default function ForgotPasswordPageBlock() {

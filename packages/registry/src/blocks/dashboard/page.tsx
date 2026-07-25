@@ -1,11 +1,19 @@
 "use client"
 
 import { BarChart3, TrendingUp, Users, Zap, ArrowUpRight, ArrowDownRight, Clock, CheckCircle2, XCircle } from "lucide-react"
-import { GlassCard, GlassCardContent, GlassCardDescription, GlassCardHeader, GlassCardTitle } from "../../liquid-glass/glass-card"
-import { GlassButton } from "../../liquid-glass/glass-button"
-import { GlassBadge } from "../../liquid-glass/glass-badge"
-import { GlassProgress } from "../../liquid-glass/glass-progress"
-import { GlassAvatar, GlassAvatarFallback, GlassAvatarImage } from "../../liquid-glass/glass-avatar"
+import {
+  GlassCard,
+  GlassCardContent,
+  GlassCardDescription,
+  GlassCardHeader,
+  GlassCardTitle,
+  GlassButton,
+  GlassBadge,
+  GlassProgress,
+  GlassAvatar,
+  GlassAvatarFallback,
+  GlassAvatarImage,
+} from "@einui/registry"
 
 const stats = [
   { label: "Total Revenue", value: "$45,231", change: "+20.1%", trend: "up", icon: TrendingUp, color: "from-green-400 to-emerald-500" },

@@ -2,10 +2,16 @@
 
 import { useMemo, useState } from "react"
 import { Eye, EyeOff, UserPlus, Check } from "lucide-react"
-import { GlassCard, GlassCardContent, GlassCardDescription, GlassCardHeader, GlassCardTitle } from "../../liquid-glass/glass-card"
-import { GlassInput } from "../../liquid-glass/glass-input"
-import { GlassButton } from "../../liquid-glass/glass-button"
-import { GlassCheckbox } from "../../liquid-glass/glass-checkbox"
+import {
+  GlassCard,
+  GlassCardContent,
+  GlassCardDescription,
+  GlassCardHeader,
+  GlassCardTitle,
+  GlassInput,
+  GlassButton,
+  GlassCheckbox,
+} from "@einui/registry"
 import { Label } from "@einui/ui"
 
 interface ValidationRules {

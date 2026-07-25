@@ -18,14 +18,30 @@ import {
   Database,
   Folder,
 } from "lucide-react"
-import { GlassTabs, GlassTabsContent, GlassTabsList, GlassTabsTrigger } from "../../liquid-glass/glass-tabs"
-import { GlassCard, GlassCardContent, GlassCardDescription, GlassCardHeader, GlassCardTitle } from "../../liquid-glass/glass-card"
-import { GlassInput } from "../../liquid-glass/glass-input"
-import { GlassButton } from "../../liquid-glass/glass-button"
-import { GlassAvatar, GlassAvatarFallback } from "../../liquid-glass/glass-avatar"
-import { GlassBadge } from "../../liquid-glass/glass-badge"
-import { GlassDialog, GlassDialogContent, GlassDialogDescription, GlassDialogFooter, GlassDialogHeader, GlassDialogTitle, GlassDialogTrigger } from "../../liquid-glass/glass-dialog"
-import { GlassProgress } from "../../liquid-glass/glass-progress"
+import {
+  GlassTabs,
+  GlassTabsContent,
+  GlassTabsList,
+  GlassTabsTrigger,
+  GlassCard,
+  GlassCardContent,
+  GlassCardDescription,
+  GlassCardHeader,
+  GlassCardTitle,
+  GlassInput,
+  GlassButton,
+  GlassAvatar,
+  GlassAvatarFallback,
+  GlassBadge,
+  GlassDialog,
+  GlassDialogContent,
+  GlassDialogDescription,
+  GlassDialogFooter,
+  GlassDialogHeader,
+  GlassDialogTitle,
+  GlassDialogTrigger,
+  GlassProgress,
+} from "@einui/registry"
 
 
 const stats = [
