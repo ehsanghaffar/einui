@@ -66,102 +66,128 @@ Ein UI is a comprehensive collection of beautiful, production-ready "liquid glas
 
 ```
 einui/
-├── app/                          # Next.js app directory (RSC)
-│   ├── layout.tsx               # Root layout
-│   ├── page.tsx                 # Homepage
-│   ├── globals.css              # Global styles
-│   ├── robots.ts                # SEO robots
-│   ├── sitemap.ts               # Dynamic sitemap
-│   ├── docs/                    # Documentation pages
-│   │   ├── layout.tsx
-│   │   ├── page.tsx
-│   │   ├── blocks/              # Layout blocks (admin-panel, dashboard, etc.)
-│   │   ├── cli/                 # CLI documentation
-│   │   ├── components/          # Component documentation
-│   │   ├── dark-mode/           # Theme documentation
-│   │   ├── installation/        # Installation guides
-│   │   ├── registry/            # Registry documentation
-│   │   └── theming/             # Theming documentation
-│   └── rss.xml/
-│       └── route.ts             # RSS feed endpoint
+├── apps/
+│   └── docs/                          # Documentation site (Next.js 16)
+│       ├── app/                       # Next.js app directory (RSC)
+│       │   ├── layout.tsx            # Root layout
+│       │   ├── page.tsx              # Homepage
+│       │   ├── robots.ts             # SEO robots
+│       │   ├── sitemap.ts            # Dynamic sitemap
+│       │   ├── docs/                 # Documentation pages
+│       │   │   ├── layout.tsx
+│       │   │   ├── page.tsx
+│       │   │   ├── blocks/           # Layout blocks (admin, login, etc.)
+│       │   │   ├── cli/              # CLI documentation
+│       │   │   ├── components/       # Component documentation
+│       │   │   ├── dark-mode/        # Theme documentation
+│       │   │   ├── installation/     # Installation guides
+│       │   │   ├── registry/         # Registry documentation
+│       │   │   └── theming/          # Theming documentation
+│       │   └── rss.xml/
+│       │       └── route.ts          # RSS feed endpoint
+│       ├── components/               # App-specific components
+│       │   ├── glass-announcement.tsx
+│       │   ├── liquid-glass-menu.tsx
+│       │   ├── top-header.tsx
+│       │   ├── docs/                 # Documentation components
+│       │   ├── home/                 # Homepage components
+│       │   └── seo/                  # SEO components
+│       ├── lib/                      # App-specific utilities
+│       │   ├── seo.ts
+│       │   ├── syntax-highlighter.ts
+│       │   └── docs/
+│       │       ├── component-registry.tsx
+│       │       └── components/       # Split component examples
+│       ├── constants/                # App-specific constants
+│       │   └── nav-items.tsx
+│       ├── styles/                   # Global styles
+│       │   └── globals.css
+│       ├── public/                   # Static assets
+│       │   └── r/                    # Generated registry JSON files
+│       ├── Dockerfile                # Docker configuration
+│       ├── compose.yml               # Docker Compose
+│       ├── components.json           # Shadcn config
+│       ├── package.json
+│       └── tsconfig.json
 │
-├── components/                  # Reusable React components
-│   ├── glass-announcement.tsx   # Glass-morphism announcement
-│   ├── liquid-glass-menu.tsx    # Glass menu component
-│   ├── open-in-v0-button.tsx    # V0 integration button
-│   ├── scroll-indicator.tsx     # Scroll tracking indicator
-│   ├── theme-provider.tsx       # Theme context provider
-│   ├── top-header.tsx           # Header component
-│   ├── docs/                    # Documentation-specific components
-│   │   ├── component-doc-page.tsx
-│   │   ├── component-preview.tsx
-│   │   ├── code-block-with-copy.tsx
-│   │   ├── styled-code.tsx
-│   │   ├── sidebar.tsx
-│   │   └── ... (documentation utilities)
-│   ├── home/                    # Homepage components
-│   │   ├── component-grid.tsx
-│   │   └── widget-showcase.tsx
-│   ├── seo/                     # SEO utilities
-│   │   └── json-ld.tsx
-│   └── ui/                      # Primitive UI components (shadcn style)
-│       ├── avatar.tsx
-│       ├── button.tsx
-│       ├── input.tsx
-│       ├── label.tsx
-│       ├── separator.tsx
-│       ├── sheet.tsx
-│       ├── sidebar.tsx
-│       ├── skeleton.tsx
-│       ├── tooltip.tsx
-│       └── use-mobile.tsx
+├── packages/
+│   ├── ui/                           # Base UI primitives
+│   │   ├── src/
+│   │   │   ├── index.ts
+│   │   │   ├── avatar.tsx
+│   │   │   ├── button.tsx
+│   │   │   ├── input.tsx
+│   │   │   ├── label.tsx
+│   │   │   ├── separator.tsx
+│   │   │   ├── sheet.tsx
+│   │   │   ├── sidebar.tsx
+│   │   │   ├── skeleton.tsx
+│   │   │   └── tooltip.tsx
+│   │   └── package.json
+│   │
+│   ├── registry/                     # Liquid glass components + blocks
+│   │   ├── src/
+│   │   │   ├── liquid-glass/         # 23 glass components
+│   │   │   ├── innovative/           # 8 innovative components
+│   │   │   ├── widgets/              # 6 widget components
+│   │   │   └── blocks/               # 4 block layouts
+│   │   ├── tests/                    # Component tests
+│   │   ├── registry.json             # Registry source (shadcn format)
+│   │   └── package.json
+│   │
+│   ├── hooks/                        # Shared React hooks
+│   │   ├── src/
+│   │   │   ├── index.ts
+│   │   │   └── use-mobile.ts
+│   │   └── package.json
+│   │
+│   ├── constants/                    # Shared constants
+│   │   ├── src/
+│   │   │   ├── index.ts
+│   │   │   └── mock-data.ts
+│   │   └── package.json
+│   │
+│   ├── types/                        # Shared TypeScript types
+│   │   ├── src/
+│   │   │   └── index.ts
+│   │   └── package.json
+│   │
+│   ├── utils/                        # Shared utilities
+│   │   ├── src/
+│   │   │   ├── index.ts
+│   │   │   ├── utils.ts
+│   │   │   └── code-utilities.ts
+│   │   └── package.json
+│   │
+│   ├── icons/                        # Icon re-exports
+│   │   ├── src/
+│   │   │   └── index.ts
+│   │   └── package.json
+│   │
+│   ├── config-typescript/            # Shared TypeScript config
+│   │   ├── base.json
+│   │   ├── nextjs.json
+│   │   ├── react-library.json
+│   │   └── package.json
+│   │
+│   ├── config-eslint/                # Shared ESLint config
+│   │   ├── index.mjs
+│   │   ├── library.mjs
+│   │   └── package.json
+│   │
+│   └── config-tailwind/              # Shared Tailwind config
+│       ├── src/
+│       │   └── index.ts
+│       ├── postcss.config.mjs
+│       └── package.json
 │
-├── registry/                    # Component registry (shadcn format)
-│   ├── blocks/                  # Full-page layout blocks
-│   ├── innovative/              # Innovative component variations
-│   ├── liquid-glass/            # Main glass-morphism components
-│   └── widgets/                 # Standalone widgets
-│
-├── public/                      # Static assets
-│   ├── manifest.json
-│   └── r/                       # Registry JSON definitions
-│       ├── admin-panel.json
-│       ├── base-widget.json
-│       ├── glass-*.json         # Individual component definitions
-│       └── ... (100+ component registries)
-│
-├── lib/                         # Utility functions
-│   ├── utils.ts                 # General utilities
-│   ├── code-utilities.ts        # Code processing
-│   ├── syntax-highlighter.ts    # Code highlighting
-│   ├── seo.ts                   # SEO helpers
-│   └── docs/
-│       └── component-registry.tsx
-│
-├── hooks/                       # React hooks
-│   └── use-mobile.ts            # Mobile detection hook
-│
-├── types/                       # TypeScript type definitions
-│   └── css.d.ts                 # CSS module types
-│
-├── constants/                   # Application constants
-│   ├── nav-items.tsx            # Navigation configuration
-│   └── mock-data.ts             # Mock data for previews
-│
-├── styles/                      # Global styles
-│   └── globals.css
-│
-├── tests/                       # Test configuration
-│   ├── setup.ts
-│   └── components/              # Component tests
-│
-├── configuration files
-│   ├── package.json             # Dependencies and scripts
-│   ├── tsconfig.json            # TypeScript configuration
-│   ├── next.config.ts           # Next.js configuration
-│   ├── vitest.config.ts         # Vitest configuration
-│   ├── postcss.config.mjs        # PostCSS configuration
-│   ├── eslint.config.mjs        # ESLint configuration
+├── turbo.json                        # Turborepo pipeline config
+├── pnpm-workspace.yaml               # Workspace definition
+├── package.json                      # Root package.json
+├── tsconfig.json                     # Root TypeScript config
+├── llms.txt                          # This file
+└── README.md
+```
 │   ├── components.json          # shadcn configuration
 │   ├── tailwind.config.ts       # Tailwind CSS configuration
 │   └── compose.yml              # Docker compose configuration
