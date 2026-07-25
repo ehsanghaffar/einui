@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Github, Star, Menu, X, ExternalLink } from "lucide-react";
 import { cn } from "@einui/utils";
-import { headerNavItems } from "@/contants/nav-items";
+import { headerNavItems } from "@/constants/nav-items";
 
 export function TopHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

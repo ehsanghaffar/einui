@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@einui/utils";
 import { Menu, X, Home, Blocks } from "lucide-react";
-import { generateNavigation } from "@/contants/nav-items";
+import { generateNavigation } from "@/constants/nav-items";
 
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);

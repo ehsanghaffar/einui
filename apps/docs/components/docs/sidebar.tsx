@@ -19,7 +19,7 @@ import {
   SidebarSeparator,
 } from "@einui/ui";
 import { Home, Github, ExternalLink, Blocks } from "lucide-react";
-import { generateNavigation } from "@/contants/nav-items";
+import { generateNavigation } from "@/constants/nav-items";
 
 function SidebarNavContent() {
   const pathname = usePathname();
