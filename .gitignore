@@ -49,3 +49,4 @@ improve_suggests.md
 # build artifacts
 dist/
 .next
+.pnpm-store
