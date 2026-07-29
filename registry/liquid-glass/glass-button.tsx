@@ -3,7 +3,7 @@
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
-import { Slot } from "@radix-ui/react-slot"
+import { Slot as SlotPrimitive } from "radix-ui"
 
 const glassButtonVariants = cva(
   cn(
@@ -68,7 +68,7 @@ export interface GlassButtonProps
 
 const GlassButton = React.forwardRef<HTMLButtonElement, GlassButtonProps>(
   ({ className, variant, asChild = false, size, glowEffect = false, children, ...props }, ref) => {
-    const Comp = asChild ? Slot : 'button'
+    const Comp = asChild ? SlotPrimitive.Slot : "button"
     return (
       <div className="relative inline-block">
         {glowEffect && (
