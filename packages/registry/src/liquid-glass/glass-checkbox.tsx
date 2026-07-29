@@ -32,7 +32,8 @@ export interface GlassCheckboxProps extends React.ComponentPropsWithoutRef<typeo
 
 const GlassCheckbox = React.forwardRef<React.ElementRef<typeof CheckboxPrimitive.Root>, GlassCheckboxProps>(
   ({ className, label, id, ...props }, ref) => {
-    const checkboxId = id || "glass-checkbox-id"
+    const generatedId = React.useId()
+    const checkboxId = id || generatedId
 
     return (
       <div className="flex items-center gap-3">

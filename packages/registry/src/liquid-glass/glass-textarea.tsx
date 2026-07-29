@@ -12,7 +12,8 @@ export interface GlassTextareaProps extends React.TextareaHTMLAttributes<HTMLTex
 
 const GlassTextarea = React.forwardRef<HTMLTextAreaElement, GlassTextareaProps>(
   ({ className, glowOnFocus = true, label, error, id, ...props }, ref) => {
-    const textareaId = id || "glass-textarea-id"
+    const generatedId = React.useId()
+    const textareaId = id || generatedId
     const errorId = `${textareaId}-error`
 
     return (

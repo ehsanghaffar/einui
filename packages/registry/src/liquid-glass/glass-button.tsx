@@ -70,7 +70,7 @@ const GlassButton = React.forwardRef<HTMLButtonElement, GlassButtonProps>(
   ({ className, variant, asChild = false, size, glowEffect = false, children, ...props }, ref) => {
     const Comp = asChild ? Slot : 'button'
     return (
-      <div className="relative inline-block">
+      <div className="relative inline-block group">
         {glowEffect && (
           <div className="absolute -inset-1 rounded-xl bg-linear-to-r from-cyan-500/40 via-blue-500/40 to-purple-500/40 blur-lg opacity-70 transition-opacity group-hover:opacity-100" />
         )}

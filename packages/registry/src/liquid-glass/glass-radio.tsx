@@ -34,7 +34,8 @@ const GlassRadioGroupItem = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Item>,
   GlassRadioGroupItemProps
 >(({ className, label, id, ...props }, ref) => {
-  const radioId = id || `glass-radio-${props.value}`
+  const generatedId = React.useId()
+  const radioId = id || generatedId
 
   return (
     <div className="flex items-center gap-3">
