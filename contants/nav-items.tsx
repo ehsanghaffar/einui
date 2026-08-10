@@ -83,6 +83,8 @@ const componentIcons: Record<string, LucideIcon> = {
   "glass-command-palette": Command,
   "glass-notification": Bell,
   "glass-morph-card": MousePointer,
+  "glass-orb": Sparkles,
+  "glass-waveform": Gauge,
   "glass-ripple": Droplets,
   "glass-gauge": Gauge,
   "glass-dock": Dock,
@@ -118,7 +120,7 @@ export const headerNavItems = [
   { href: "/docs", label: "Docs", icon: BookOpen },
   { href: "/docs/components/glass-avatar", label: "Components", icon: LayoutGrid },
   { href: "/docs/components/weather-widget", label: "Widgets", icon: Sparkles, isNew: true },
-  { href: "/docs/blocks/signup", label: "Blocks", icon: PanelLeft, isNew: true },
+  { href: "/docs/blocks/signup", label: "Blocks", icon: PanelLeft, isNew: false },
 ];
 
 export function generateNavigation(): NavSection[] {
@@ -164,7 +166,7 @@ export function generateNavigation(): NavSection[] {
           title: c.title,
           href: `/docs/components/${c.slug}`,
           icon: <IconComponent className="size-4" />,
-          isNew: true,
+          isNew: false,
         }
       }),
     },
@@ -176,7 +178,7 @@ export function generateNavigation(): NavSection[] {
           title: c.title,
           href: `/docs/components/${c.slug}`,
           icon: <IconComponent className="size-4" />,
-          isNew: true,
+          isNew: false,
         }
       }),
     },
@@ -188,7 +190,7 @@ export function generateNavigation(): NavSection[] {
           title: c.title,
           href: `/docs/components/${c.slug}`,
           icon: <IconComponent className="size-4" />,
-          isNew: true,
+          isNew: false,
         }
       }),
     },
@@ -232,10 +234,10 @@ export function generateNavigation(): NavSection[] {
     {
       title: "Blocks",
       items: [
-        { title: "Sign Up Page", href: "/docs/blocks/signup", icon: <UserPlus className="size-4" />, isNew: true },
-        { title: "Login Page", href: "/docs/blocks/login", icon: <User className="size-4" />, isNew: true },
-        { title: "Forgot Password", href: "/docs/blocks/forgot-password", icon: <Mail className="size-4" />, isNew: true },
-        { title: "Pricing Page", href: "/docs/blocks/pricing", icon: <BarChart3 className="size-4" />, isNew: true },
+        { title: "Sign Up Page", href: "/docs/blocks/signup", icon: <UserPlus className="size-4" />, isNew: false },
+        { title: "Login Page", href: "/docs/blocks/login", icon: <User className="size-4" />, isNew: false },
+        { title: "Forgot Password", href: "/docs/blocks/forgot-password", icon: <Mail className="size-4" />, isNew: false },
+        { title: "Pricing Page", href: "/docs/blocks/pricing", icon: <BarChart3 className="size-4" />, isNew: false },
         { title: "Admin Panel", href: "/docs/blocks/admin", icon: <PanelLeft className="size-4" /> },
       ],
     },

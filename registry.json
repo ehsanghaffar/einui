@@ -256,6 +256,30 @@
       ]
     },
     {
+      "name": "glass-orb",
+      "type": "registry:component",
+      "title": "Glass Orb",
+      "description": "An interactive ambient orb that follows the cursor, emits soft glass particle trails, and updates its glow based on status.",
+      "files": [
+        {
+          "path": "registry/innovative/glass-orb.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "glass-waveform",
+      "type": "registry:component",
+      "title": "Glass Waveform",
+      "description": "An audio visualizer with liquid glass bars, gradient fills, and a frozen glass paused state.",
+      "files": [
+        {
+          "path": "registry/innovative/glass-waveform.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "glass-timeline",
       "type": "registry:component",
       "title": "Glass Timeline",

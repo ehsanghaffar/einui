@@ -2670,6 +2670,22 @@ export const componentRegistry: Record<string, ComponentConfig> = {
     category: "innovative",
     examples: innovativeExamples,
   },
+  "glass-orb": {
+    slug: "glass-orb",
+    title: "Orb",
+    description: "Interactive orb component with motion-following glass effects and particle trails.",
+    registryName: "glass-orb",
+    category: "innovative",
+    examples: innovativeExamples,
+  },
+  "glass-waveform": {
+    slug: "glass-waveform",
+    title: "Waveform",
+    description: "Audio visualization component with glass-inspired bars, gradient glow, and paused state.",
+    registryName: "glass-waveform",
+    category: "innovative",
+    examples: innovativeExamples,
+  },
   "glass-timeline": {
     slug: "glass-timeline",
     title: "Timeline",
