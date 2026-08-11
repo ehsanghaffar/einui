@@ -101,12 +101,12 @@ export default function HomePage() {
         {/* Announcement Banner */}
         <div className="flex justify-center pt-10">
           <GlassAnnouncement
-            href="/docs/components/calendar-widget"
+            href="/docs/components/glass-orb"
             label="New"
-            variant="primary"
+            variant="purple"
             size="sm"
           >
-            Widgets are here — Calendar, Clock, Weather & more
+            New Interactive Widgets: Waveform, Orb, and more!
           </GlassAnnouncement>
         </div>
         {/* Hero Section */}
