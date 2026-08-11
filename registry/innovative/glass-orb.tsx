@@ -253,6 +253,13 @@ const GlassOrb = React.forwardRef<HTMLDivElement, GlassOrbProps>(
         role={label ? "status" : undefined}
         aria-label={label}
         aria-hidden={label ? undefined : true}
+        style={{
+          // Give the wrapper intrinsic dimensions so the absolutely positioned
+          // orb stays visible (with overflow-hidden) even without sizing classes.
+          minWidth: sizePx,
+          minHeight: sizePx,
+          ...props.style,
+        }}
       >
         <div
           ref={orbRef}

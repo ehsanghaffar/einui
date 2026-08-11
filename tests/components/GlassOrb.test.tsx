@@ -31,6 +31,14 @@ describe('GlassOrb', () => {
     expect(orb).toHaveStyle({ width: '190px', height: '190px' })
   })
 
+  it('gives the wrapper intrinsic dimensions so the orb stays visible', () => {
+    render(<GlassOrb data-testid="orb" />)
+    expect(screen.getByTestId('orb')).toHaveStyle({
+      minWidth: '140px',
+      minHeight: '140px',
+    })
+  })
+
   it('applies custom class names', () => {
     render(<GlassOrb className="custom-class" data-testid="orb" />)
     expect(screen.getByTestId('orb')).toHaveClass('custom-class')

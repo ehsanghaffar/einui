@@ -65,10 +65,9 @@ const GlassWaveform = React.forwardRef<HTMLDivElement, GlassWaveformProps>(
       return () => mql.removeEventListener("change", onChange)
     }, [])
 
-    // Keep the bar refs in sync with the rendered count.
-    React.useEffect(() => {
-      barRefs.current = Array.from({ length: barCount }, () => null)
-    }, [barCount])
+    // Bar refs are populated by the ref callbacks below on every commit; do NOT
+    // clear them here (a post-mount clear would wipe the DOM nodes the animation
+    // loop reads and leave the visualizer frozen on the initial mount).
 
     // Animate the bars by writing heights directly to the DOM (no re-renders).
     React.useEffect(() => {
