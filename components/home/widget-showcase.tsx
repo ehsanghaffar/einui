@@ -1,5 +1,6 @@
 "use client";
 
+import { GlassOrb } from "@/registry/innovative";
 import { CalendarWidget, CompactCalendarWidget } from "@/registry/widgets/calendar-widget";
 import {
   AnalogClockWidget,
@@ -51,7 +52,9 @@ export function WidgetShowcase() {
       <div className="flex flex-col gap-4 md:col-span-2 lg:col-span-1">
         <ForecastWidget forecast={forecastData} />
         <div className="grid grid-cols-2 gap-4 lg:flex lg:flex-col lg:gap-4 xl:grid xl:grid-cols-2">
-          <DigitalClockWidget showSeconds={false} className="w-full h-full" />
+          <div className="flex items-center justify-center rounded-xl bg-linear-to-br from-cyan-500/5 to-purple-500/5 border border-white/5 hover:border-cyan-500/20 transition-all">
+          <GlassOrb status="active" size="md"/>
+          </div>
           <StopwatchWidget className="w-full h-full" />
         </div>
       </div>

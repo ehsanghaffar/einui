@@ -1,9 +1,13 @@
 import { defineConfig } from 'vitest/config'
-import react from '@vitejs/plugin-react'
 import path from 'path'
 
 export default defineConfig({
-  plugins: [react()],
+  // Note: @vitejs/plugin-react is intentionally omitted — it fails to load
+  // against the pinned Vite version (vite/internal subpath mismatch).
+  // esbuild handles JSX via the automatic runtime instead.
+  esbuild: {
+    jsx: 'automatic',
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './'),

@@ -20,6 +20,7 @@ import {
   Calendar,
   TrendingUp,
   CloudSun,
+  Sparkles
 } from "lucide-react";
 import { GlassBadge } from "@/registry/liquid-glass/glass-badge";
 
@@ -40,11 +41,12 @@ const advancedComponents = [
   {
     title: "Command Palette",
     href: "/docs/components/glass-command-palette",
-    icon: Command,
-    isNew: true,
+    icon: Command
   },
-  { title: "Notifications", href: "/docs/components/glass-notification", icon: Bell, isNew: true },
-  { title: "Morph Card", href: "/docs/components/glass-morph-card", icon: MousePointer, isNew: true },
+  { title: "Notifications", href: "/docs/components/glass-notification", icon: Bell },
+  { title: "Morph Card", href: "/docs/components/glass-morph-card", icon: MousePointer },
+  { title: "Orb", href: "/docs/components/glass-orb", icon: Sparkles, isNew: true },
+  { title: "Waveform", href: "/docs/components/glass-waveform", icon: Gauge, isNew: true },
   { title: "Ripple", href: "/docs/components/glass-ripple", icon: Droplets },
   { title: "Timeline", href: "/docs/components/glass-timeline", icon: Clock },
   { title: "Gauge", href: "/docs/components/glass-gauge", icon: Gauge },
